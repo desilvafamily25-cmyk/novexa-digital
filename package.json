@@ -15,7 +15,6 @@
     "@tailwindcss/vite": "latest",
     "astro": "7.2.9",
     "gsap": "latest",
-    "nodemailer": "^9.0.6",
     "tailwindcss": "4.3.3"
   },
   "devDependencies": {
