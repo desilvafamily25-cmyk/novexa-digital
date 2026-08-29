@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Form definitions</title>
+</head>
+<body>
+  <!-- Static blueprint for Netlify's deploy-time form scanner. -->
+  <form name="project-enquiry" method="POST" action="/success/" data-netlify="true" netlify-honeypot="company-website" hidden>
+    <input type="hidden" name="form-name" value="project-enquiry" />
+    <input name="company-website" />
+    <input name="name" />
+    <input type="email" name="email" />
+    <input name="organisation" />
+    <select name="budget">
+      <option>$1,500–$5,000 + GST</option>
+      <option>$5,000–$15,000 + GST</option>
+      <option>$15,000–$30,000 + GST</option>
+      <option>$30,000+ + GST</option>
+      <option>Not sure yet</option>
+    </select>
+    <textarea name="project"></textarea>
+    <input type="checkbox" name="privacy-consent" />
+  </form>
+</body>
+</html>
