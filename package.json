@@ -1,0 +1,24 @@
+{
+  "name": "novexa-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "verify": "python scripts/verify-build.py"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "latest",
+    "@tailwindcss/vite": "latest",
+    "astro": "7.2.9",
+    "gsap": "latest",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "typescript": "latest"
+  }
+}

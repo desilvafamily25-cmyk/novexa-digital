@@ -1,0 +1,27 @@
+---
+const path = Astro.url.pathname;
+const nav = [['/services/','Services'],['/healthcare/','Healthcare'],['/process/','Process'],['/about/','About']];
+---
+<header class:list={['site-header', path !== '/' && 'is-solid']} data-header>
+  <nav class="container nav" aria-label="Primary navigation">
+    <a class="logo" href="/" aria-label="NOVEXA DIGITAL home"><span class="logo-mark" aria-hidden="true">N</span><span>NOVEXA DIGITAL</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu" data-menu-button><i></i></button>
+    <div class="nav-links" id="primary-menu" data-menu>
+      {nav.map(([href,label]) => <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>)}
+      <a class="btn btn-primary" href="/contact/">Start a project</a>
+    </div>
+  </nav>
+</header>
+<script>
+  const header = document.querySelector<HTMLElement>('[data-header]');
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-button]');
+  const menu = document.querySelector<HTMLElement>('[data-menu]');
+  const setHeader = () => header?.classList.toggle('scrolled', window.scrollY > 20);
+  setHeader(); window.addEventListener('scroll', setHeader, { passive: true });
+  button?.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!open));
+    button.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    menu?.classList.toggle('open', !open); document.body.classList.toggle('menu-open', !open);
+  });
+</script>
