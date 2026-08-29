@@ -1,15 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PageHero from '../components/PageHero.astro';
 ---
 <Layout title="Enquiry received — NOVEXA DIGITAL" description="Your NOVEXA DIGITAL project enquiry has been received.">
-  <PageHero eyebrow="Thank you" title="Your enquiry has been received." intro="We’ll review what you shared and respond with a useful next step." />
-  <section class="section paper">
-    <div class="narrow">
-      <h2 class="h2">What happens next</h2>
-      <p class="lead">We’ll check the context, identify any immediate questions and reply by email.</p>
-      <p class="muted">Please do not send passwords, patient information or other sensitive material by ordinary email. If secure access is needed, we’ll arrange the appropriate method.</p>
-      <a class="btn btn-outline" href="/">Return home</a>
+
+<section class="page-hero success-hero">
+  <div class="container reveal">
+    <div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><span>Enquiry received</span></div>
+    <div class="success-icon" aria-hidden="true">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4 12.5L9.5 18L20 6" stroke="#d2a66c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </div>
-  </section>
+    <p class="eyebrow">Thank you</p>
+    <h1 class="h1">Your enquiry has been received.</h1>
+    <p class="lead">We'll review what you've shared and come back to you with a useful next step — usually within one business day.</p>
+  </div>
+</section>
+
+<section class="section paper"><div class="container">
+  <p class="eyebrow" style="justify-content:center">What happens next</p>
+  <h2 class="h2" style="text-align:center;margin:0 auto 3.5rem;max-width:640px">Three simple steps from here.</h2>
+
+  <div class="container" style="padding:0">
+    <article class="process-step reveal"><div class="step-no">01</div><div><h2 class="h3">We review your enquiry</h2><p>We read the context you've shared and note any immediate questions about scope, timeline or budget.</p></div></article>
+    <article class="process-step reveal"><div class="step-no">02</div><div><h2 class="h3">We reply by email</h2><p>You'll hear back from a real person — usually a short call, a paid clarity sprint, or a scoped proposal, depending on what fits.</p></div></article>
+    <article class="process-step reveal"><div class="step-no">03</div><div><h2 class="h3">We agree the next step together</h2><p>Nothing proceeds without your sign-off. If a formal quote is right, you'll see the exact scope and fee before anything is committed.</p></div></article>
+  </div>
+
+  <div class="note" style="max-width:640px;margin:3rem auto 0"><strong>A quick note on privacy:</strong> please don't send passwords, patient information or other sensitive material by ordinary email. If secure access is ever needed, we'll arrange the appropriate method with you.</div>
+
+  <div style="display:flex;gap:1rem;justify-content:center;margin-top:3rem;flex-wrap:wrap">
+    <a class="btn btn-primary" href="/">Return home</a>
+    <a class="btn btn-outline" href="/services/">Browse packages and pricing</a>
+  </div>
+</div></section>
+
 </Layout>
